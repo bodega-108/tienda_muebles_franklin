@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="<?=base_url?>/assets/css/style.css">
 </head>
 <body>
 <!--=================== header ========================== -->
@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="<?=base_url?>/producto/index">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"></a>
@@ -38,7 +38,9 @@
      
 
     </div>
-    <div class="form-inline my-2 my-lg-0">
+    <div class="form-inline my-2  my-lg-0">
+      <a href="<?=base_url?>/usuario/registro" class="btn btn-primary mr-3">registrarse</a>
+
         <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Iniciar sesión
@@ -93,13 +95,13 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-          <img src="./assets/img/banner1.jpg" height="600px"class="d-block w-100" alt="...">
+          <img src="<?=base_url?>/assets/img/banner1.jpg" height="600px"class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/banner2.jpg" class="d-block w-100" height="600px" alt="...">
+        <img src="<?=base_url?>/assets/img/banner2.jpg" class="d-block w-100" height="600px" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="./assets/img/banner3.jpg" class="d-block w-100" height="600px" alt="...">
+        <img src="<?=base_url?>/assets/img/banner3.jpg" class="d-block w-100" height="600px" alt="...">
       </div>
     </div>
   </div>

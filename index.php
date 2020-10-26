@@ -1,13 +1,18 @@
 <?php 
 require_once 'autoload.php';
+require 'config/db.php';
+require 'config/parameters.php';
 require 'views/layout/header.php';
+// Conexion base de datos
+
 ?>
 
 <?php 
     if(isset($_GET['controller'])){
         $nombre_Controlador = $_GET['controller'].'Controller';
     }else{
-        echo "<div class='bg-dark'> <h1>La pagina que buscas no existe.</h1> </div>";
+        $error = new ErrorController();
+        $error->index();
         exit();
     }
   
@@ -23,11 +28,12 @@ require 'views/layout/header.php';
           
            $controlador->$action();
         }else{
-            echo "<div class='bg-dark'> <h1>La pagina que buscas no existe.</h1> </div>";
+            $error = new ErrorController();
+            $error->index();
         }
     }else{
-        echo "<div class='bg-dark'> <h1>La pagina que buscas no existe.</h1> </div>";
-
+        $error = new ErrorController();
+        $error->index();
     }   
 
    
